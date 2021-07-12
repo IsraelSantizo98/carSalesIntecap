@@ -1,0 +1,92 @@
+:root{
+    --textColorPrimary: #000;
+    --textColorSecondary: #fff;
+    --backgroundColorPrimary: #F8F8F8;
+    --backgroundColorSecondary: #fff;
+    /* --backgrouondColorFooter: #16355B; */
+    --backgrouondColorFooter: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
+    --colorIcon: #fff;
+}
+html {
+    /* Reset para rems 62.5% = 10px */
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+body {
+    font-family: "Lato", sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+    background-color: var(--backgroundColorPrimary);
+}
+i{
+    font-size: 2.5rem;
+}
+a{
+    text-decoration: none;
+    color: var(--textColorPrimary);
+}
+ul{
+    list-style: none;
+}
+h1{
+    color: var(--textColorSecondary);
+    margin: 0 3rem;
+}
+.section{
+    max-width: 140rem;
+    margin: 0 auto;
+}
+.section-margin {
+    margin: 5rem 0;
+}
+.container-navbar{
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    background-color: var(--backgroundColorSecondary);
+}
+.container-banner{
+    background-image: url(../img/car-baner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+}
+.container-sale{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    /* height: 100vh; */
+}
+.container-sale h2{
+    margin: 0;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+}
+.container-footer{
+    background: var(--backgrouondColorFooter);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 0;
+    height: 10rem;
+}
+.container-footer i{
+    color: var(--colorIcon);
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
