@@ -25,12 +25,12 @@
                         <li><a href="#"></a></li>
                     </ul>
                 </div>
-            </div>
-            <div class="theme-toggle">
+                <div class="theme-toggle">
                 <input type="checkbox" id="theme-toggle-btn">
                 <label for="theme-toggle-btn">
                     <i class="fas fa-moon toggle-icon" aria-hidden="true"></i>
                 </label>
+            </div>
             </div>
             <div class="container-banner section-margin">
                 <h1>El auto que buscas lo tenemos</h1>
