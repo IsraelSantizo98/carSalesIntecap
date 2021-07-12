@@ -1,35 +1,19 @@
 :root{
     --textColorPrimary: #000;
     --textColorSecondary: #fff;
-    --backgroundColorPrimary: #F8F8F8;
     --backgroundColorSecondary: #fff;
     /* --backgrouondColorFooter: #16355B; */
     --backgrouondColorFooter: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
-    --colorIcon: #fff;
 }
 html[data-theme="light"] {
-    --clr-secondary: #2ec1ac;
-    --textoBoton: #000;
-    --backgroundBoton: #5bc8e0;
-    --backgroundHeader: #333;
-    --textH1: #fff;
-    --colorAHeader: #fff;
-    --colorACard: #2f2d2e;
-    --textBadge: #fff;
-    --colorBackground: #fff;
-    --badge-text: #000;
+    --backgroundColorPrimary: #F8F8F8;
+    --colorIcon: #fff;
+    --colorIconTheme: #000;
 }
 html[data-theme="dark"] {
-    --clr-secondary: #2ec1ac;
-    --textoBoton: #000;
-    --backgroundBoton: #5bc8e0;
-    --backgroundHeader: #000;
-    --textH1: #fff;
-    --colorAHeader: #fff;
-    --colorACard: #2f2d2e;
-    --textBadge: #000;
-    --colorBackground: #181818;
-    --badge-text: #fff;
+    --backgroundColorPrimary: #0e2a51;
+    --colorIcon: #cccfcf;
+    --colorIconTheme: #cccfcf;
 }
 html {
     /* Reset para rems 62.5% = 10px */
@@ -117,7 +101,7 @@ h1{
 /* THEME */
 .theme-toggle {
     position: fixed;
-    right: 10rem;
+    right: 2rem;
 }
 #theme-toggle-btn {
     display: none;
@@ -125,4 +109,7 @@ h1{
 .theme-toggle label {
     cursor: pointer;
     color: var(--clr-secondary);
+}
+.toggle-icon{
+    color: var(--colorIconTheme);
 }
