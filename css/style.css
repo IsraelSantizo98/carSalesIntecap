@@ -1,19 +1,21 @@
 :root{
-    --textColorPrimary: #000;
-    --textColorSecondary: #fff;
-    --backgroundColorSecondary: #fff;
-    /* --backgrouondColorFooter: #16355B; */
     --backgrouondColorFooter: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
 }
 html[data-theme="light"] {
+    --textColorPrimary: #000;
+    --textColorSecondary: #fff;
     --backgroundColorPrimary: #F8F8F8;
+    --backgroundColorSecondary: #FFF;
     --colorIcon: #fff;
     --colorIconTheme: #000;
 }
 html[data-theme="dark"] {
-    --backgroundColorPrimary: #0e2a51;
-    --colorIcon: #cccfcf;
-    --colorIconTheme: #cccfcf;
+    --textColorPrimary: #CDD9E5;
+    --textColorSecondary: #fff;
+    --backgroundColorPrimary: #1C2128;
+    --backgroundColorSecondary: #2D333B;
+    --colorIcon: #9DA7B2;
+    --colorIconTheme: #9DA7B2;
 }
 html {
     /* Reset para rems 62.5% = 10px */
@@ -34,9 +36,11 @@ body {
 i{
     font-size: 2.5rem;
 }
+a, h1, h2, span{
+    color: var(--textColorPrimary);
+}
 a{
     text-decoration: none;
-    color: var(--textColorPrimary);
 }
 ul{
     list-style: none;
