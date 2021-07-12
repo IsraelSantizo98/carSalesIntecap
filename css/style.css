@@ -7,6 +7,30 @@
     --backgrouondColorFooter: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
     --colorIcon: #fff;
 }
+html[data-theme="light"] {
+    --clr-secondary: #2ec1ac;
+    --textoBoton: #000;
+    --backgroundBoton: #5bc8e0;
+    --backgroundHeader: #333;
+    --textH1: #fff;
+    --colorAHeader: #fff;
+    --colorACard: #2f2d2e;
+    --textBadge: #fff;
+    --colorBackground: #fff;
+    --badge-text: #000;
+}
+html[data-theme="dark"] {
+    --clr-secondary: #2ec1ac;
+    --textoBoton: #000;
+    --backgroundBoton: #5bc8e0;
+    --backgroundHeader: #000;
+    --textH1: #fff;
+    --colorAHeader: #fff;
+    --colorACard: #2f2d2e;
+    --textBadge: #000;
+    --colorBackground: #181818;
+    --badge-text: #fff;
+}
 html {
     /* Reset para rems 62.5% = 10px */
     box-sizing: border-box;
@@ -89,4 +113,16 @@ h1{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+/* THEME */
+.theme-toggle {
+    position: fixed;
+    right: 10rem;
+}
+#theme-toggle-btn {
+    display: none;
+}
+.theme-toggle label {
+    cursor: pointer;
+    color: var(--clr-secondary);
 }
