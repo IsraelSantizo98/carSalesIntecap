@@ -15,7 +15,7 @@
             //Crea un espacio en el servidor para que se puede acceder desde la computadora que se inicia seccion
             session_start();
             //variables de tipo session se puede acceder en cualquier ficheros, se coloca un name y luego el name que esta en la variable $r
-            $_SESSION['name'] = $r['name'];
+            $_SESSION['name'] = $r['nameN'];
             //Se obtiene el resultado del metodo post
             $_SESSION['userName'] = $userName;
             //$_SESSION['usuario'] = $r['usuario'];
@@ -30,7 +30,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/1085598771.js" crossorigin="anonymous"></script>
     <title>Login</title>
 </head>
 <body>
@@ -44,6 +47,7 @@
                 <input type="password" name="pass" id="pass" placeholder="Contraseña">
                 <input type="hidden" name="entrar" value="entrar">
                 <input class="btn btn-submit" type="submit" value="Inciar Sesion">
+                <p>No tienes una cuenta crea una <a href="newUser.php">aqui</a></p>
             </fieldset>
         </form>
     </div>
