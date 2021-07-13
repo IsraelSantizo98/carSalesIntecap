@@ -1,5 +1,6 @@
 :root{
     --backgrouondColorFooter: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
+    --backgroundButtonSubmitted: #71B100;
 }
 html[data-theme="light"] {
     --textColorPrimary: #000;
@@ -8,6 +9,7 @@ html[data-theme="light"] {
     --backgroundColorSecondary: #FFF;
     --colorIcon: #fff;
     --colorIconTheme: #000;
+    --backgroundButtonSubmitted: #71B100;
 }
 html[data-theme="dark"] {
     --textColorPrimary: #CDD9E5;
@@ -16,6 +18,7 @@ html[data-theme="dark"] {
     --backgroundColorSecondary: #2D333B;
     --colorIcon: #9DA7B2;
     --colorIconTheme: #9DA7B2;
+    --backgroundButtonSubmitted: #71B100;
 }
 html {
     /* Reset para rems 62.5% = 10px */
@@ -55,6 +58,22 @@ h1{
 }
 .section-margin {
     margin: 5rem 0;
+}
+.btn{
+    font-weight: 700;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    color: #fff;
+}
+.btn:hover {
+    cursor: pointer;
+}
+.btn-submit{
+    background-color: var(--backgroundButtonSubmitted);
 }
 .container-navbar{
     display: flex;
@@ -116,4 +135,32 @@ h1{
 }
 .toggle-icon{
     color: var(--colorIconTheme);
+}
+/*Login*/
+.container-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+legend {
+    font-size: 2.4rem;
+    color: #333;
+}
+label {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+input:not([type="submit"]),
+textarea,
+select {
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: #e1e1e1;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+    outline: none;
 }

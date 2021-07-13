@@ -20,7 +20,7 @@
                 </div>
                 <div class="navbar">
                     <ul>
-                        <li><a href="#"><i class="fas fa-sign-in-alt"></i></a></li>
+                        <li><a href="login.php"><i class="fas fa-sign-in-alt"></i></a></li>
                         <li><a href="#"></a></li>
                         <li><a href="#"></a></li>
                     </ul>
