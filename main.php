@@ -23,7 +23,7 @@ $imageP = $_SESSION['imageP'];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/1085598771.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=<?php echo(rand()); ?>">
     <title>Main</title>
 </head>
 <body>
@@ -47,9 +47,10 @@ $imageP = $_SESSION['imageP'];
 <div class="container-crud">
     <div class="crud-selection">
       <ul>
-        <li><a href="#">Insertar</a></li>
-        <li><a href="#">Modificar</a></li>
-        <li><a href="#">Eliminar</a></li>
+        <li><a href="#">Insertar item</a></li>
+        <li><a href="#">Visualizar item</a></li>
+        <li><a href="#">Modificar item</a></li>
+        <li><a href="#">Eliminar item</a></li>
       </ul>
     </div>
     <div class="container-profile">
