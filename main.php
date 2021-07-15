@@ -33,9 +33,8 @@ $imageP = $_SESSION['imageP'];
     </div>
     <div class="navbar">
       <ul>
-          <li><a href="index.php"><i class="fas fa-sign-in-alt"></i></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="logout.php"><i class="fas fa-sign-in-alt"></i></a></li>
       </ul>
   </div>
   <div class="theme-toggle">
@@ -43,20 +42,28 @@ $imageP = $_SESSION['imageP'];
     <label for="theme-toggle-btn">
       <i class="fas fa-moon toggle-icon" aria-hidden="true"></i>
     </label>
-    <a href="logout.php">Cerrar Sesión</a>
   </div>
-  <div class="container">
+</div>
+<div class="container-crud">
     <div class="crud-selection">
       <ul>
-        <li>Insertar</li>
-        <li>Modificar</li>
-        <li>Eliminar</li>
+        <li><a href="#">Insertar</a></li>
+        <li><a href="#">Modificar</a></li>
+        <li><a href="#">Eliminar</a></li>
       </ul>
     </div>
-  </div>
-    <?php
-        echo "<h2>Bienvenido: $name</h2>";
-        //echo "<img src='imageProfile/$imageP' alt='photo of me' />";
-    ?>
+    <div class="container-profile">
+      <div class="image-profile">
+        <?php
+          echo "<img src='imageProfile/$imageP' alt='Image Profile' />";
+        ?>
+      </div>
+      <div class="name-profile">
+        <?php
+          echo "<h2>Bienvenido: $name</h2>";
+        ?>
+      </div>
+    </div>
+</div>
 </body>
 </html>
