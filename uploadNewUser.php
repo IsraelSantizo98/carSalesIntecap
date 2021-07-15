@@ -22,7 +22,7 @@ $dir=opendir($directorio);//Abrir carpeta
 $target_path = $directorio.'/'.$filename;//Ubicacion futura
 if(move_uploaded_file($source, $target_path)) {
     echo "La foto se ha guardado correctamente";
-    $instruccion="INSERT INTO usuario (idUsuario, nameN, userName, passwordN, emailN, imageProfile) VALUES (NULL,'$nameNew', '$nameNewUser', '$email', '$password', '$filename')";
+    $instruccion="INSERT INTO usuario (idUsuario, nameN, userName, passwordN, emailN, imageProfile) VALUES (NULL,'$nameNew', '$nameNewUser', '$password', '$email', '$filename')";
     mysqli_query($conection, $instruccion);
 } else {
 echo "Error intente de nuevo o notifique";

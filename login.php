@@ -18,6 +18,8 @@
             $_SESSION['name'] = $r['nameN'];
             //Se obtiene el resultado del metodo post
             $_SESSION['userName'] = $userName;
+            //$_SESSION['imageP'] = $imageP;
+            $_SESSION['imageP'] = $r['imageProfile'];
             //$_SESSION['usuario'] = $r['usuario'];
             //con esta instruccion se envia a otro archivo
             header('location: main.php');
