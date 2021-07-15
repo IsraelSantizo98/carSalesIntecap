@@ -22,6 +22,7 @@ $imageP = $_SESSION['imageP'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1085598771.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Main</title>
 </head>
@@ -32,7 +33,7 @@ $imageP = $_SESSION['imageP'];
     </div>
     <div class="navbar">
       <ul>
-          <li><a href="login.php"><i class="fas fa-sign-in-alt"></i></a></li>
+          <li><a href="index.php"><i class="fas fa-sign-in-alt"></i></a></li>
           <li><a href="#"></a></li>
           <li><a href="#"></a></li>
       </ul>
@@ -42,6 +43,7 @@ $imageP = $_SESSION['imageP'];
     <label for="theme-toggle-btn">
       <i class="fas fa-moon toggle-icon" aria-hidden="true"></i>
     </label>
+    <a href="logout.php">Cerrar Sesión</a>
   </div>
   <div class="container">
     <div class="crud-selection">
@@ -56,6 +58,5 @@ $imageP = $_SESSION['imageP'];
         echo "<h2>Bienvenido: $name</h2>";
         //echo "<img src='imageProfile/$imageP' alt='photo of me' />";
     ?>
-    <a href="logout.php">Cerrar Sesión</a>
 </body>
 </html>
