@@ -27,14 +27,14 @@ $imageP = $_SESSION['imageP'];
     <title>Main</title>
 </head>
 <body>
-  <div class="container-navbar ">
+  <div class="container-navbar">
     <div class="logo-navbar">
         <img src="https://intecap.edu.gt/wp-content/uploads/2020/03/logo-intecap.png" alt="Logo">
     </div>
     <div class="navbar">
       <ul>
         <li><a href="index.php">Home</a></li>
-        <li><a href="logout.php"><i class="fas fa-sign-in-alt"></i></a></li>
+        <li><a href="logout.php">Cerrar Sesion<i class="fas fa-sign-out-alt"></i></a></li>
       </ul>
   </div>
   <div class="theme-toggle">

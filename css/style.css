@@ -10,6 +10,8 @@ html[data-theme="light"] {
     --colorIcon: #fff;
     --colorIconTheme: #000;
     --backgroundButtonSubmitted: #71B100;
+    --backgroundNewCar: #17EA29;
+    --backgroundUsedCar: #218380;
 }
 html[data-theme="dark"] {
     --textColorPrimary: #CDD9E5;
@@ -35,7 +37,6 @@ body {
     font-size: 1.6rem;
     line-height: 2;
     background-color: var(--backgroundColorPrimary);
-
 }
 i{
     font-size: 2.5rem;
@@ -76,6 +77,16 @@ h1{
 .btn-submit{
     background-color: var(--backgroundButtonSubmitted);
 }
+.badge{
+    border-radius: 1rem;
+    padding: .8rem .5rem;
+}
+.new{
+    background-color: var(--backgroundNewCar);
+}
+.used{
+    background-color: var(--backgroundUsedCar);
+}
 .container-navbar{
     display: flex;
     align-items:center;
@@ -83,7 +94,7 @@ h1{
     background-color: var(--backgroundColorSecondary);
 }
 .container-banner{
-    background-image: url(../img/car-baner.jpg);
+    background-image: url(https://i.imgur.com/4Y7uqMn.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -112,7 +123,7 @@ h1{
     align-items: center;
     justify-content: space-around;
     margin-bottom: 0;
-    height: 10rem;
+    height: 9rem;
 }
 .container-footer i{
     color: var(--colorIcon);
@@ -198,4 +209,17 @@ select {
     justify-content: center;
     flex-direction: column;
     flex-wrap: nowrap;
+}
+/* Car corousel*/
+.imagen{
+    width: 100vw;
+    height: 90vh;
+    display: none;
+}
+.arrow{
+    width: 200px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
 }

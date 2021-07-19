@@ -38,56 +38,64 @@
             <div class="container-sale section">
                 <div class="item item-1">
                     <div class="card card1-image">
-                        <img src="img/car4.jpg" alt="Car">
+                        <a href="car/car1.php">
+                            <img src="https://i.imgur.com/2Aw0a0w.jpg" alt="Car">
+                        </a>
                     </div>
                     <div class="card1-description">
                         <h2>Camaro 2017</h2>
                         <span>Mecanico</span>
+                        <span class="badge new">Nuevo</span>
                     </div>
                 </div>
                 <div class="item item-2">
                     <div class="card card2-image">
-                        <img src="img/car2.jpg" alt="Car">
+                        <img src="https://i.imgur.com/IPHD0FS.jpg" alt="Car">
                     </div>
                     <div class="card1-description">
                         <h2>Camaro 2017</h2>
                         <span>Mecanico</span>
+                        <span class="badge used">Usado</span>
                     </div>
                 </div>
                 <div class="item item-3">
                     <div class="card card3-image">
-                        <img src="img/car3.jpg" alt="Car">
+                        <img src="https://i.imgur.com/x0M3K6z.jpg" alt="Car">
                     </div>
                     <div class="card3-description">
                         <h2>Camaro 2017</h2>
                         <span>Mecanico</span>
+                        <span class="badge new">Nuevo</span>
                     </div>
                 </div>
                 <div class="item item-1">
                     <div class="card card1-image">
-                        <img src="img/car4.jpg" alt="Car">
+                        <img src="https://i.imgur.com/R0V03fz.jpg   " alt="Car">
                     </div>
                     <div class="card1-description">
                         <h2>Camaro 2017</h2>
                         <span>Mecanico</span>
+                        <span class="badge used">Usado</span>
                     </div>
                 </div>
                 <div class="item item-2">
                     <div class="card card2-image">
-                        <img src="img/car2.jpg" alt="Car">
+                        <img src="https://i.imgur.com/3tYz5DP.jpg" alt="Car">
                     </div>
                     <div class="card1-description">
                         <h2>Camaro 2017</h2>
                         <span>Mecanico</span>
+                        <span class="badge new">Nuevo</span>
                     </div>
                 </div>
                 <div class="item item-3">
                     <div class="card card3-image">
-                        <img src="img/car3.jpg" alt="Car">
+                        <img src="https://i.imgur.com/gm4Wns4.jpg" alt="Car">
                     </div>
                     <div class="card3-description">
                         <h2>Camaro 2017</h2>
                         <span>Mecanico</span>
+                        <span class="badge used">Usado</span>
                     </div>
                 </div>
             </div>
