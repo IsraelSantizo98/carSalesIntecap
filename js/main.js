@@ -32,13 +32,6 @@ var loteFotos = document.getElementsByClassName('fotoCarousel');
 var contador = 0;
 //Se agrega con el indice inicial con display block para que se ve la primera imagen
 loteFotos[0].style.display='block';
-var array = loteFotos;
-console.log(array)
-const getLastArrItem = (arr) => {  
-    let lastItem = arr.pop();
-    console.log(`Last element is ${lastItem}`);
-} 
-getLastArrItem(array);
 //la funcion es para ir a la siguiente imagen
 function nextImage(){
     //Se suma al contador para que un valor aumentado por 1 en cada click de boton
@@ -61,9 +54,7 @@ function previousImage(){
     contador--;
     //Condiciona a que cuando el contador sea -1 (un elemento que no existe en el array) entonces el contador pasara el maximo de incide del array
     if(contador == -1){
-        let lastItem = loteFotos.pop();
-        console.log(lastItem)
-        //contador = 4;
+        contador = 4;
         //contador=loteFotos[loteFotos.length+1];
     }
     for(var i = loteFotos.length -1; i>=0; i--){
