@@ -21,7 +21,9 @@ $imageP = $_SESSION['imageP'];
     <div class="container">
         <div class="container-navbar ">
             <div class="logo-navbar">
-                <img src="https://intecap.edu.gt/wp-content/uploads/2020/03/logo-intecap.png" alt="Logo">
+                <a href="../index.php">
+                    <img src="https://intecap.edu.gt/wp-content/uploads/2020/03/logo-intecap.png" alt="Logo">
+                </a>
             </div>
             <div class="navbar">
                 <ul>
@@ -38,15 +40,32 @@ $imageP = $_SESSION['imageP'];
         </div>
     </div>
     <div class="container-carousel">
-        <img class="fotoCarousel imagen" src="../imageProfile/508247.jpg" alt="">
-        <img class="fotoCarousel imagen" src="../imageProfile/971601.jpg" alt="">
-        <img class="fotoCarousel imagen" src="../imageProfile/andy-holmes-LUpDjlJv4_c-unsplash.jpg" alt="">
-        <img class="fotoCarousel imagen" src="../imageProfile/greg-rakozy-oMpAz-DN-9I-unsplash.jpg" alt="">
+        <img class="fotoCarousel imagen" src="https://i.imgur.com/2Aw0a0w.jpg" alt="">
+        <img class="fotoCarousel imagen" src="https://i.imgur.com/IPHD0FS.jpg" alt="">
+        <img class="fotoCarousel imagen" src="https://i.imgur.com/x0M3K6z.jpg" alt="">
+        <img class="fotoCarousel imagen" src="https://i.imgur.com/R0V03fz.jpg" alt="">
+        <img class="fotoCarousel imagen" src="https://i.imgur.com/3tYz5DP.jpg" alt="">
+            <div class="arrow arrow-left">
+                <i onclick="previousImage()" class="fas fa-chevron-left"></i>
+            </div>
+            <div class="arrow arrow-right">
+                <i onclick="nextImage()" class="fas fa-chevron-right"></i>
+            </div>
     </div>
-    <div class="arrow">
-        <i onclick="previousImage()"class="fas fa-arrow-circle-left"></i>
-        <i onclick="nextImage()" class="fas fa-arrow-circle-right"></i>
+    <div class="container-description-car section-margin">
+        <h3>Camaro</h3>
     </div>
+    <div class="container-footer section-margin">
+            <div class="logo-footer">
+                    <a href="https://intecap.edu.gt/" target="_blank"><img src="https://intecap.edu.gt/wp-content/uploads/2019/01/logo-inverse.png" alt="Logo"></a>
+                </div>
+                <div class="footer">
+                    <ul>
+                        <li><a href="https://github.com/IsraelSantizo98"><i class="fab fa-github"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 </div>
 <script src="../js/main.js"></script>
 </body>
