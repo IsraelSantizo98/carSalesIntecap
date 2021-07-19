@@ -70,7 +70,7 @@
                 </div>
                 <div class="item item-1">
                     <div class="card card1-image">
-                        <img src="https://i.imgur.com/R0V03fz.jpg   " alt="Car">
+                        <img src="https://i.imgur.com/R0V03fz.jpg" alt="Car">
                     </div>
                     <div class="card1-description">
                         <h2>Camaro 2017</h2>
