@@ -12,6 +12,8 @@ html[data-theme="light"] {
     --backgroundButtonSubmitted: #71B100;
     --backgroundNewCar: #17EA29;
     --backgroundUsedCar: #218380;
+    --backgroundArrow: rgba(255, 255, 255, 0.5);
+    --colorArrow: #6e8387;
 }
 html[data-theme="dark"] {
     --textColorPrimary: #CDD9E5;
@@ -211,15 +213,33 @@ select {
     flex-wrap: nowrap;
 }
 /* Car corousel*/
-.imagen{
-    width: 100vw;
-    height: 90vh;
+.container-carousel{
+    width: 40vw;
+    height: 50vh;
+    margin: 5rem auto;
+    position: relative;
+}
+.container-carousel img{
+    width: 100%;
+    height: 100%;
     display: none;
 }
 .arrow{
-    width: 200px;
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
     margin-top: 10px;
+    position: absolute;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--backgroundArrow);
+    color: var(--colorArrow);
+}
+.arrow-left{
+    top: 50%;
+    left: 2%;
+}
+.arrow-right{
+    top: 50%;
+    right: 2%;
 }
