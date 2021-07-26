@@ -47,7 +47,7 @@ $imageP = $_SESSION['imageP'];
 <div class="container-crud">
     <div class="crud-selection">
       <ul>
-        <li><a href="#">Insertar item</a></li>
+        <li><a href="newCar.php">Insertar item</a></li>
         <li><a href="#">Visualizar item</a></li>
         <li><a href="#">Modificar item</a></li>
         <li><a href="#">Eliminar item</a></li>

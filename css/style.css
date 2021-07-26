@@ -186,13 +186,14 @@ select {
     align-items: center;
     justify-content: center;
     height: 80vh;
-
+    border: 1px solid black;
 }
 .crud-selection{
     height: 100%;
     width: 30%;
     display: flex;
     align-items: center;
+    border: 1px solid black;
 }
 .image-profile{
     width: 400px;
@@ -211,6 +212,7 @@ select {
     justify-content: center;
     flex-direction: column;
     flex-wrap: nowrap;
+    border: 1px solid black;
 }
 /* Car corousel*/
 .container-carousel{

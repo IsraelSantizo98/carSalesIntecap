@@ -2,7 +2,7 @@
     $serve = "localhost";
     $user = "root";
     $password = "";
-    $db = "carsale";
+    $db = "automoviles";
     $conection = mysqli_connect($serve, $user, $password, $db);
     if (!$conection) {
         echo "Error: No se pudo conectar a MySQL" . PHP_EOL;
