@@ -11,7 +11,7 @@
     <title>Nuevo Carro</title>
 </head>
 <body>
-    <form action="">
+    <form action="uploadNewCar.php" method="post" enctype="multipart/form-data">
         <fieldset>
             <legend>Nuevo Vehiculo</legend>
             <label for="marca">Marca</label>
@@ -47,7 +47,7 @@
             $instruccion = "SELECT * FROM transmision";
             $query = mysqli_query($conection, $instruccion);
             while ($r = mysqli_fetch_assoc($query)){
-                $id = $r['id_transmision'];
+                $id = $r['id_transmicion'];
                 #echo "<option value = '".$r['id_marca']."'>".$r['marca']."</option>";
                 echo "<option value = '$id'>".$r['transmision']."</option>";
             }
@@ -97,17 +97,21 @@
             <input type="text" name="linea"placeholder="Linea">
             <!-- Modelo -->
             <label for="Modelo">Modelo</label>
-            <input type="text" name="linea" placeholder="Modelo">
+            <input type="text" name="modelo" placeholder="Modelo">
             <!-- Kilometros -->
             <label for="km">Kilometros recorridos</label>
             <input type="text" name="km" placeholder="Kilometros">
             <!-- Precio -->
-            <label for="precion">Precio</label>
-            <input type="text" name="precion"placeholder="Precio">
+            <label for="precio">Precio</label>
+            <input type="text" name="precio"placeholder="Precio">
             <!-- Cantidad de puertas -->
             <label for="puerta">Cantidad de puertas</label>
             <input type="text" name="puerta"placeholder="Puertas">
+            <!-- Foto -->
+            <label for="archivo">Insertar una imagen</label>
+            <input type="file" name="archivo[]" id="archivo" multiple="">
+            <input type="submit" value="Enviar">
         </fieldset>
     </form>
 </body>
-</html>
+</html> 

@@ -4,10 +4,10 @@
     $password = "";
     $db = "automoviles";
     $conection = mysqli_connect($serve, $user, $password, $db);
-    if (!$conection) {
+    /*if (!$conection) {
         echo "Error: No se pudo conectar a MySQL" . PHP_EOL;
         echo "Error de depuracion: " . mysqli_connect_error() . PHP_EOL;
         echo "Error de depuracion: " . mysqli_connect_error() . PHP_EOL;
         exit;
-    }
+    }*/
 ?>
