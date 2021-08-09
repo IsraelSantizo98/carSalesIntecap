@@ -38,9 +38,9 @@
     <script src="https://kit.fontawesome.com/1085598771.js" crossorigin="anonymous"></script>
     <title>Login</title>
 </head>
-<body>
+<body class="bodylogin">
     <div class="container-login">
-        <form method="POST">
+        <form method="POST" class="form-login">
             <fieldset>
                 <legend>Inicio de Sesion</legend>
                 <label for="userName">Ingrese nombre de usuario</label>
@@ -49,7 +49,7 @@
                 <input type="password" name="pass" id="pass" placeholder="Contraseña">
                 <input type="hidden" name="entrar" value="entrar">
                 <input class="btn btn-submit" type="submit" value="Inciar Sesion">
-                <p>No tienes una cuenta crea una <a href="newUser.php">aqui</a></p>
+                <p>No tienes una cuenta crea una <a href="newUser.php" class="btn-new-user">aqui</a></p>
             </fieldset>
         </form>
     </div>
