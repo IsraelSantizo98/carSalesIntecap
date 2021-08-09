@@ -1,3 +1,6 @@
+<?php
+include 'php/conection.php';
+?>
 <!DOCTYPE html>
 <html lang="es" data-theme="light">
 <head>
@@ -13,7 +16,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="container">
+        <dv class="container">
             <div class="container-navbar ">
                 <div class="logo-navbar">
                     <img src="https://intecap.edu.gt/wp-content/uploads/2020/03/logo-intecap.png" alt="Logo">
@@ -36,69 +39,40 @@
                 <h1>El auto que buscas lo tenemos</h1>
             </div>
             <div class="container-sale section">
-                <div class="item item-1">
-                    <div class="card card1-image">
-                        <a href="car/car1.php">
-                            <img src="https://i.imgur.com/2Aw0a0w.jpg" alt="Car">
-                        </a>
-                    </div>
-                    <div class="card1-description">
-                        <h2>Camaro 2017</h2>
-                        <span>Mecanico</span>
-                        <span class="badge new">Nuevo</span>
-                    </div>
+                <?php
+                    /*$instruccion = "SELECT vehiculos.marca AS marca1,vehiculos.correlativo, marcas.marca AS marca2, transmision.transmision AS trans, fotos_autos.ubicacion AS url
+                    FROM vehiculos INNER JOIN marcas ON vehiculos.marca = marcas.id_marca
+                    INNER JOIN transmision ON vehiculos.transmision = transmision.id_transmicion
+                    INNER JOIN fotos_autos ON vehiculos.correlativo = fotos_autos.id_vehiculo";*/
+                    $instruccion="SELECT vehiculos.correlativo, vehiculos.linea, marcas.marca FROM vehiculos
+                    INNER JOIN marcas ON vehiculos.marca = marcas.id_marca";
+                    $query = mysqli_query($conection, $instruccion);
+                    //$resultado = mysqli_num_rows($query);
+                        while ($i=mysqli_fetch_assoc($query)) {
+                            //por cada recorrido tendremos un correlativo de auto    
+                            $correlativo = $i['correlativo'];
+                            echo "<div class='item'>";
+                            echo "<div class='card card1-image'>";
+                            echo "<a href='car/car1.php'></a>";
+                            $instrucFoto = "SELECT * FROM fotos_autos WHERE id_vehiculo = $correlativo";
+                            $query2 = mysqli_query($conection,$instrucFoto);
+                            $contador=0;
+                            while ($a=mysqli_fetch_assoc($query2)){
+                                if($contador==0){
+                                    echo "<img src=".$a['ubicacion'].">";
+                                }
+                                $contador++;
+                                }
+                            echo "</div>";
+                            echo "<div class='card-description'>";
+                            echo "<h2>".$i['marca']."</h2>";
+                            echo "<span>".$i['linea']."</span>";
+                            echo "</div>";
+                            echo "</div>";
+                        }
+                ?>
                 </div>
-                <div class="item item-2">
-                    <div class="card card2-image">
-                        <img src="https://i.imgur.com/IPHD0FS.jpg" alt="Car">
-                    </div>
-                    <div class="card1-description">
-                        <h2>Camaro 2017</h2>
-                        <span>Mecanico</span>
-                        <span class="badge used">Usado</span>
-                    </div>
-                </div>
-                <div class="item item-3">
-                    <div class="card card3-image">
-                        <img src="https://i.imgur.com/x0M3K6z.jpg" alt="Car">
-                    </div>
-                    <div class="card3-description">
-                        <h2>Camaro 2017</h2>
-                        <span>Mecanico</span>
-                        <span class="badge new">Nuevo</span>
-                    </div>
-                </div>
-                <div class="item item-1">
-                    <div class="card card1-image">
-                        <img src="https://i.imgur.com/R0V03fz.jpg" alt="Car">
-                    </div>
-                    <div class="card1-description">
-                        <h2>Camaro 2017</h2>
-                        <span>Mecanico</span>
-                        <span class="badge used">Usado</span>
-                    </div>
-                </div>
-                <div class="item item-2">
-                    <div class="card card2-image">
-                        <img src="https://i.imgur.com/3tYz5DP.jpg" alt="Car">
-                    </div>
-                    <div class="card1-description">
-                        <h2>Camaro 2017</h2>
-                        <span>Mecanico</span>
-                        <span class="badge new">Nuevo</span>
-                    </div>
-                </div>
-                <div class="item item-3">
-                    <div class="card card3-image">
-                        <img src="https://i.imgur.com/gm4Wns4.jpg" alt="Car">
-                    </div>
-                    <div class="card3-description">
-                        <h2>Camaro 2017</h2>
-                        <span>Mecanico</span>
-                        <span class="badge used">Usado</span>
-                    </div>
-                </div>
-            </div>
+            </dv>
             <div class="container-footer section-margin">
             <div class="logo-footer">
                     <a href="https://intecap.edu.gt/" target="_blank"><img src="https://intecap.edu.gt/wp-content/uploads/2019/01/logo-inverse.png" alt="Logo"></a>
