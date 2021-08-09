@@ -94,6 +94,7 @@ h1{
     align-items:center;
     justify-content: space-around;
     background-color: var(--backgroundColorSecondary);
+    margin-bottom: 5rem;
 }
 .container-banner{
     background-image: url(https://i.imgur.com/4Y7uqMn.jpg);
@@ -107,13 +108,19 @@ h1{
 }
 .container-sale{
     display: grid;
+    /* grid-auto-flow: dense; */
+    /* grid-auto-rows: 40rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 40rem), 1fr)); */
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-auto-rows: repeat(3, minmax(20rem, 1fr));
     gap: 2rem;
-    /* height: 100vh; */
+    height: 100%;
 }
 .container-sale h2{
     margin: 0;
+}
+.card{
+    height: 25rem;
 }
 .card img{
     width: 100%;
@@ -151,20 +158,49 @@ h1{
     color: var(--colorIconTheme);
 }
 /*Login*/
+.bodylogin{
+    margin: 0;
+    padding: 0;
+}
+/* .container-log{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid black;
+    position: relative;
+} */
+/* .container-image{
+    background-image: url(../imageProfile/wave.png);
+    background-size: contain;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50%;
+    width: 50vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+} */
+/* .container-image img{
+    height: 80%;
+} */
 .container-login {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    width: 100vw;
     height: 100vh;
+    width: 100vw;
 }
 legend {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
     color: #333;
 }
 label {
     display: block;
+    font-size: 1.8rem;
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -179,6 +215,12 @@ select {
     border: none;
     border-radius: 1rem;
     outline: none;
+}
+.btn-new-user{
+    color: blue;
+    font-size: 1.8rem;
+    border-bottom: blue 1px solid;
+    font-weight: 700;
 }
 /*main*/
 .container-crud{
@@ -244,4 +286,19 @@ select {
 .arrow-right{
     top: 50%;
     right: 2%;
+}
+/*Modificar vehiculo*/
+.card-description{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    text-align: right;
+    padding: .8rem;
+}
+.crud-option{
+    display: flex;
+    justify-content: flex-end;
+}
+.crud-option span a i{
+    margin-left: 1rem;
 }
