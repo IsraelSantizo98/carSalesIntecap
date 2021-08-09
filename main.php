@@ -27,44 +27,47 @@ $imageP = $_SESSION['imageP'];
     <title>Main</title>
 </head>
 <body>
-  <div class="container-navbar">
-    <div class="logo-navbar">
-        <img src="https://intecap.edu.gt/wp-content/uploads/2020/03/logo-intecap.png" alt="Logo">
-    </div>
-    <div class="navbar">
-      <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="logout.php">Cerrar Sesion<i class="fas fa-sign-out-alt"></i></a></li>
-      </ul>
-  </div>
-  <div class="theme-toggle">
-    <input type="checkbox" id="theme-toggle-btn">
-    <label for="theme-toggle-btn">
-      <i class="fas fa-moon toggle-icon" aria-hidden="true"></i>
-    </label>
-  </div>
-</div>
-<div class="container-crud">
-    <div class="crud-selection">
-      <ul>
-        <li><a href="newCar.php">Insertar item</a></li>
-        <li><a href="#">Visualizar item</a></li>
-        <li><a href="#">Modificar item</a></li>
-        <li><a href="#">Eliminar item</a></li>
-      </ul>
-    </div>
-    <div class="container-profile">
-      <div class="image-profile">
-        <?php
-          echo "<img src='imageProfile/$imageP' alt='Image Profile' />";
-        ?>
+  <div class="wrapper">
+    <div class="container">
+    <div class="container-navbar">
+      <div class="logo-navbar">
+        <a href="index.html">
+          <img src="https://intecap.edu.gt/wp-content/uploads/2020/03/logo-intecap.png" alt="Logo">
+        </a>
       </div>
-      <div class="name-profile">
-        <?php
-          echo "<h2>Bienvenido: $name</h2>";
-        ?>
+      <div class="navbar">
+        <ul>
+          <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i></a></li>
+        </ul>
+    </div>
+    <div class="theme-toggle">
+      <input type="checkbox" id="theme-toggle-btn">
+      <label for="theme-toggle-btn">
+        <i class="fas fa-moon toggle-icon" aria-hidden="true"></i>
+      </label>
+    </div>
+  </div>
+  <div class="container-crud">
+      <div class="crud-selection">
+        <ul>
+          <li><a href="newCar.php">Insertar item</a></li>
+          <li><a href="carModi.php">Modificar item</a></li>
+          <li><a href="carDelete.php">Eliminar item</a></li>
+        </ul>
+      </div>
+      <div class="container-profile">
+        <div class="image-profile">
+          <?php
+            echo "<img src='imageProfile/$imageP' alt='Image Profile' />";
+          ?>
+        </div>
+        <div class="name-profile">
+          <?php
+            echo "<h2>Bienvenido: $name</h2>";
+          ?>
+        </div>
       </div>
     </div>
-</div>
+  </div>
 </body>
 </html>
