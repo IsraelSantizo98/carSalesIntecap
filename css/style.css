@@ -1,6 +1,9 @@
 :root{
     --backgrouondColorFooter: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
     --backgroundButtonSubmitted: #71B100;
+    --btn-success: #27FF62;
+    --btn-error: #DF2F16;
+    --btn-new-user: #1C25E5;
 }
 html[data-theme="light"] {
     --textColorPrimary: #000;
@@ -301,4 +304,59 @@ select {
 }
 .crud-option span a i{
     margin-left: 1rem;
+}
+/* Modales */
+.body-modal{
+    margin: 0;
+    padding: 0;
+}
+.wrapper-modal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+.container-modal{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: inherit;
+    width: inherit;
+}
+.modal-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.modal-image{
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    height: inherit;
+    width: inherit;
+}
+.modal-success{
+    background-image: url(../imageProfile/success.png);
+}
+.modal-error{
+    background-image: url(../imageProfile/error.png);
+}
+.modal-new-user{
+    background-image: url(../imageProfile/newUser.png)
+}
+.btn-modal{
+    padding: .8rem 3rem;
+}
+.btn-success{
+    background-color: var(--btn-success);
+}
+.btn-error{
+    background-color: var(--btn-error);
+    color: #fff;
+}
+.btn-new-user{
+    background-color: var(--btn-new-user);
+    color: #fff;
 }
