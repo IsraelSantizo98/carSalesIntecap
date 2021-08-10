@@ -15,10 +15,8 @@
     $instruccion = "UPDATE vehiculos SET marca = '$marca', linea = '$linea', transmision = '$transmicion', modelo = '$modelo', km = '$km', traccion = '$traccion', combustible = '$combustible', color = '$color', precio = '$precio', cantidad_puertas = '$puerta'  WHERE correlativo = '$idVehiculos'";
     $query = mysqli_query($conection, $instruccion);
     if ($query){
-        echo "exito";
-        //header('location: ../modales/afirmativo.php');
+        header('location: ../modales/afirmativo.php');
     }else{
-        echo "error";
-        //header('location: ../modales/error.php');
+        header('location: ../modales/error.php');
     }
 ?>

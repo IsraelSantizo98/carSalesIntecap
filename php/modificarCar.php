@@ -23,10 +23,10 @@
     <form action="actualizaCar.php" method="POST">
     <fieldset>
     <legend>Actualizar Vehiculo</legend>
-    <label for="marca1">Marca</label>
+    <label for="marca">Marca</label>
             <select name="marca" id="">
             <?php
-                $instruccion2 = "SELECT vehiculos.correlativo, marcas.id_marca, marcas.marca FROM vehiculos INNER JOIN marcas ON vehiculos.correlativo = marcas.id_marca
+                $instruccion2 = "SELECT vehiculos.correlativo, marcas.id_marca, marcas.marca FROM vehiculos INNER JOIN marcas ON vehiculos.marca = marcas.id_marca
                 WHERE vehiculos.correlativo = '$idVehiculo'";
                 $cont = mysqli_query($conection, $instruccion2);
                 while ($i=mysqli_fetch_assoc($cont)){

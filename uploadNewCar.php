@@ -32,13 +32,11 @@ $dir=opendir($directorio);//Abrir carpeta
 $target_path = $directorio.'/'.$filename;//Ubicacion futura
 if(move_uploaded_file($source, $target_path)) {
     echo "La foto se ha guardado correctamente";
-    //Se agrega el nombre de la variable target_path para que se obtenga la ruta
     $instruccion = "INSERT INTO fotos_autos (correlativo, id_vehiculo, ubicacion) VALUES (NULL, '$recienteId', '$target_path')";
-    //$instruccion = "INSERT INTO fotos_autos (correlativo, id_vehiculos, ubicacion) VALUES (NULL, '$recienteId', '$filename')";
-    #$instruccion="INSERT INTO vehiculos (correlativo, marca, linea, tipo, transmicion, modelo, km, traccion, combustible, color, precio, cantidad_puertas) VALUES (NULL,'$marca', '$linea', '$tipo', '$transmicion', '$modelo', '$km', '$traccion', '$combustible', '$color', '$precio', '$puerta')";
     mysqli_query($conection, $instruccion);
+    header('location: modales/afirmativo.php');
 } else {
-echo "Error intente de nuevo o notifique";
+    header('location: modales/error.php');
 }
 closedir($dir);
     }
