@@ -31,7 +31,7 @@ $imageP = $_SESSION['imageP'];
     <div class="container">
     <div class="container-navbar">
       <div class="logo-navbar">
-        <a href="index.html">
+        <a href="index.php">
           <img src="https://intecap.edu.gt/wp-content/uploads/2020/03/logo-intecap.png" alt="Logo">
         </a>
       </div>
