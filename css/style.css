@@ -63,6 +63,10 @@ h1{
     max-width: 140rem;
     margin: 0 auto;
 }
+.section-2{
+    max-width: 180rem;
+    margin: 0 auto;
+}
 .section-margin {
     margin: 5rem 0;
 }
@@ -197,6 +201,13 @@ h1{
     height: 100vh;
     width: 100vw;
 }
+.container-login-image{
+    background-image: url(../imageProfile/Login.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50vh;
+    width: 50vh;
+}
 legend {
     font-size: 2.8rem;
     color: #333;
@@ -260,16 +271,49 @@ select {
     border: 1px solid black;
 }
 /* Car corousel*/
-.container-carousel{
-    width: 40vw;
-    height: 50vh;
-    margin: 5rem auto;
+.container-glider{
     position: relative;
 }
-.container-carousel img{
-    width: 100%;
-    height: 100%;
-    display: none;
+.container-carousel{
+}
+.flecha i{
+    font-size: 1.6rem;
+}
+.flecha-anterior,
+.flecha-siguiente{
+    position: absolute;
+    /*para poder modificar el alto y el ancho*/
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    border: none;
+    top: calc(50% - 4rem);
+    cursor: pointer;
+    /*por el tamaño del alto del boton*/
+    line-height: 30px;
+    text-align: center;
+    background: none;
+    color: #000;
+    opacity: 20%;
+}
+.flecha-anterior:hover,
+.flecha-siguiente:hover{
+    opacity: 100%;
+}
+.flecha-anterior{
+    left: -6rem;
+}
+.flecha-siguiente{
+    right: -6rem;
+}
+.carousel-indicadores .glider-dot:hover{
+    opacity: 0.5;
+}
+.carousel-indicadores .glider-dot.active{
+    opacity: 1;
+}
+.lista-carousel{
+    overflow: hidden;
 }
 .arrow{
     margin-top: 10px;
@@ -290,6 +334,18 @@ select {
     top: 50%;
     right: 2%;
 }
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
 /*Modificar vehiculo*/
 .card-description{
     display: grid;
@@ -304,6 +360,10 @@ select {
 }
 .crud-option span a i{
     margin-left: 1rem;
+}
+/*Informacion carousel*/
+.container-informacion{
+    
 }
 /* Modales */
 .body-modal{
