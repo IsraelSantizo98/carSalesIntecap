@@ -17,7 +17,7 @@
     <title>Show Room</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container-d">
         <div class="container-navbar ">
                 <div class="logo-navbar">
                     <a href="../index.php">
@@ -38,13 +38,25 @@
                     </label>
                 </div>
         </div>
-        <div class="container-carousel">
+        <div class="container-carousel-2">
             <button aria-label="Anterior" class="flecha-anterior" id="fl1">
                 <i class="fas fa-chevron-left"></i>
             </button>
+            <?php
+                $instruccion2 = "SELECT * FROM vehiculos 
+                INNER JOIN fotos_autos ON vehiculos.correlativo = fotos_autos.id_vehiculo
+                WHERE vehiculos.correlativo = '$idVehiculo'";
+                $query2 = mysqli_query($conection, $instruccion2);
+                while ($i = mysqli_fetch_assoc($query2)){
+                    echo "<img class='' src=".$i['ubicacion'].">";
+                }
+            ?>
             <button class="flecha-siguiente" id="fs1">
                 <i class="fas fa-chevron-right"></i>
             </button>
+            <div role="tablist" class="carousel-indicadores">
+                
+            </div>
         </div>
         <!--  
             <div class="container-carousel">
