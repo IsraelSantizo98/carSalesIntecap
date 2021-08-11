@@ -40,16 +40,11 @@ include 'php/conection.php';
             </div>
             <div class="container-sale section">
                 <?php
-                    /*$instruccion = "SELECT vehiculos.marca AS marca1,vehiculos.correlativo, marcas.marca AS marca2, transmision.transmision AS trans, fotos_autos.ubicacion AS url
-                    FROM vehiculos INNER JOIN marcas ON vehiculos.marca = marcas.id_marca
-                    INNER JOIN transmision ON vehiculos.transmision = transmision.id_transmicion
-                    INNER JOIN fotos_autos ON vehiculos.correlativo = fotos_autos.id_vehiculo";*/
                     $instruccion="SELECT vehiculos.correlativo, vehiculos.linea, marcas.marca FROM vehiculos
                     INNER JOIN marcas ON vehiculos.marca = marcas.id_marca";
                     $query = mysqli_query($conection, $instruccion);
                     //$resultado = mysqli_num_rows($query);
-                        while ($i=mysqli_fetch_assoc($query)) {
-                            //por cada recorrido tendremos un correlativo de auto    
+                        while ($i=mysqli_fetch_assoc($query)) {   
                             $correlativo = $i['correlativo'];
                             echo "<div class='item'>";
                             echo "<div class='card card1-image'>";
@@ -59,7 +54,7 @@ include 'php/conection.php';
                             $contador=0;
                             while ($a=mysqli_fetch_assoc($query2)){
                                 if($contador==0){
-                                    echo "<img src=".$a['ubicacion'].">";
+                                    echo "<a href='carShow.php'><img src=".$a['ubicacion']."></a>";
                                 }
                                 $contador++;
                                 }

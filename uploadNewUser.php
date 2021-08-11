@@ -24,7 +24,7 @@ if(move_uploaded_file($source, $target_path)) {
     echo "La foto se ha guardado correctamente";
     $instruccion="INSERT INTO usuario (idUsuario, nameN, userName, passwordN, emailN, imageProfile) VALUES (NULL,'$nameNew', '$nameNewUser', '$password', '$email', '$filename')";
     mysqli_query($conection, $instruccion);
-    header('location: modales/afirmativo.php');
+    header('location: modales/newUser.php');
 } else {
     header('location: modales/error.php');
 }
