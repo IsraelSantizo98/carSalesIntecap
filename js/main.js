@@ -25,6 +25,7 @@ if (localStorage.getItem("dark-mode") === "true") {
     toggleIcon.classList.add("fa-moon");
 }
 /* Carousel */
+/*
 //Guarda cada una de las fotos que esten con ese nombre de clase y se transforma en un array
 //array permite almacenar varios valores y acceder a cada objeto e inicia con el indice 0.
 var loteFotos = document.getElementsByClassName('fotoCarousel');
@@ -55,21 +56,6 @@ function previousImage(){
     contador--;
     //Condiciona a que cuando el contador sea -1 (un elemento que no existe en el array) entonces el contador pasara el maximo de incide del array
     if(contador == -1){
-        contador = loteFotos[loteFotos.length - 1];
-        //contador=loteFotos[loteFotos.length+1];
-    }
-    for(var i = loteFotos.length -1; i>=0; i--){
-        loteFotos[i].style.display='none';
-        //console.log("Prueba"+loteFotos[i])
-        //document.getElementsByClassName('fotoCarousel').style.display='block'
-    }
-    loteFotos[contador].style.display='block';
-};
-/*
-function previousImage(){
-    contador--;
-    //Condiciona a que cuando el contador sea -1 (un elemento que no existe en el array) entonces el contador pasara el maximo de incide del array
-    if(contador == -1){
         contador = 4;
         //contador=loteFotos[loteFotos.length+1];
     }
@@ -87,3 +73,39 @@ for(var i = 0; i < loteFotos.length; i++){
     //document.getElementsByClassName('fotoCarousel').style.display='block'
 }
 */
+/* GLIDER */
+window.addEventListener('load', function(){
+    //Elemento donde queremos agregar el carousel y la opcion como queres tener visualmente el carousel
+    new Glider(document.querySelector('.container-carousel'), {
+        //Cuantos slides se muestran
+        slidesToShow: 1,
+        //Al presionar la flecha cuandos slides avanzar
+        slidesToScroll: 1,
+        //Si se activa que se puede mover con el dedo (celular)
+        draggable: true,
+        //Indicadores (carousel-indicadores)
+        dots: '.carousel-indicadores',
+        arrows: {
+            prev: '.flecha-anterior',
+            next: '.flecha-siguiente'
+        },
+        responsive: [
+            {
+            // screens greater than >= 775px
+            breakpoint: 450,
+            settings: {
+            // Set to `auto` and provide item width to adjust to viewport
+            slidesToShow: 2,
+            slidesToScroll: 2
+            }
+            },{
+            // screens greater than >= 1024px
+                    breakpoint: 800,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+});
