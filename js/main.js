@@ -50,6 +50,22 @@ function nextImage(){
     //Luego ya que contador se sumo y que el for puso las demas fotos con none, este se coloca el valor sumado de contador para hacer que solo una foto tenga el display block
     loteFotos[contador].style.display='block';
 };
+
+function previousImage(){
+    contador--;
+    //Condiciona a que cuando el contador sea -1 (un elemento que no existe en el array) entonces el contador pasara el maximo de incide del array
+    if(contador == -1){
+        contador = loteFotos[loteFotos.length - 1];
+        //contador=loteFotos[loteFotos.length+1];
+    }
+    for(var i = loteFotos.length -1; i>=0; i--){
+        loteFotos[i].style.display='none';
+        //console.log("Prueba"+loteFotos[i])
+        //document.getElementsByClassName('fotoCarousel').style.display='block'
+    }
+    loteFotos[contador].style.display='block';
+};
+/*
 function previousImage(){
     contador--;
     //Condiciona a que cuando el contador sea -1 (un elemento que no existe en el array) entonces el contador pasara el maximo de incide del array

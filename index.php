@@ -54,7 +54,7 @@ include 'php/conection.php';
                             $contador=0;
                             while ($a=mysqli_fetch_assoc($query2)){
                                 if($contador==0){
-                                    echo "<a href='carShow.php'><img src=".$a['ubicacion']."></a>";
+                                    echo "<a href='carShow.php?codCLiente=".$i['correlativo']."'><img src=".$a['ubicacion']."></a>";
                                 }
                                 $contador++;
                                 }
