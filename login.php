@@ -39,19 +39,24 @@
     <title>Login</title>
 </head>
 <body class="bodylogin">
-    <div class="container-login">
-        <form method="POST" class="form-login">
-            <fieldset>
-                <legend>Inicio de Sesion</legend>
-                <label for="userName">Ingrese nombre de usuario</label>
-                <input type="text" id="userName" name="userName" placeholder="Nombre de usuario">
-                <label for="pass">Ingrese su contraseña</label>
-                <input type="password" name="pass" id="pass" placeholder="Contraseña">
-                <input type="hidden" name="entrar" value="entrar">
-                <input class="btn btn-submit" type="submit" value="Inciar Sesion">
-                <p>No tienes una cuenta crea una <a href="newUser.php" class="btn-new-user">aqui</a></p>
-            </fieldset>
-        </form>
+    <div class="container-login section">
+        <div class="container-login-image">
+            
+            </div>
+        <div class="container-form">
+            <form method="POST" class="form-login">
+                <fieldset>
+                    <legend>Inicio de Sesion</legend>
+                    <label for="userName">Ingrese nombre de usuario</label>
+                    <input type="text" id="userName" name="userName" placeholder="Nombre de usuario">
+                    <label for="pass">Ingrese su contraseña</label>
+                    <input type="password" name="pass" id="pass" placeholder="Contraseña">
+                    <input type="hidden" name="entrar" value="entrar">
+                    <input class="btn btn-submit" type="submit" value="Inciar Sesion">
+                    <p>No tienes una cuenta crea una <a href="newUser.php" class="btn-new-user">aqui</a></p>
+                </fieldset>
+            </form>
+        </div>
     </div>
 </body>
 </html>
