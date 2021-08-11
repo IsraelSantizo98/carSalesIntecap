@@ -17,7 +17,7 @@
     <title>Show Room</title>
 </head>
 <body>
-    <div class="container-d">
+    <div class="container">
         <div class="container-navbar ">
                 <div class="logo-navbar">
                     <a href="../index.php">
@@ -38,46 +38,44 @@
                     </label>
                 </div>
         </div>
-        <div class="container-carousel-2">
-            <button aria-label="Anterior" class="flecha-anterior" id="fl1">
+        <div class="container-glider section">
+            <button aria-label="Anterior" class="flecha flecha-anterior" id="fl1">
                 <i class="fas fa-chevron-left"></i>
             </button>
-            <?php
-                $instruccion2 = "SELECT * FROM vehiculos 
-                INNER JOIN fotos_autos ON vehiculos.correlativo = fotos_autos.id_vehiculo
-                WHERE vehiculos.correlativo = '$idVehiculo'";
-                $query2 = mysqli_query($conection, $instruccion2);
-                while ($i = mysqli_fetch_assoc($query2)){
-                    echo "<img class='' src=".$i['ubicacion'].">";
-                }
-            ?>
-            <button class="flecha-siguiente" id="fs1">
+            <div class="container-carousel">
+                <?php
+                    $instruccion2 = "SELECT * FROM vehiculos 
+                    INNER JOIN fotos_autos ON vehiculos.correlativo = fotos_autos.id_vehiculo
+                    WHERE vehiculos.correlativo = '$idVehiculo'";
+                    $query2 = mysqli_query($conection, $instruccion2);
+                    while ($i = mysqli_fetch_assoc($query2)){
+                        echo "<img class='' src=".$i['ubicacion'].">";
+                    }
+                ?>
+            </div>
+            <button class="flecha flecha-siguiente" id="fs1">
                 <i class="fas fa-chevron-right"></i>
             </button>
             <div role="tablist" class="carousel-indicadores">
                 
             </div>
         </div>
-        <!--  
-            <div class="container-carousel">
-                <?php
-                $instruccion2 = "SELECT * FROM vehiculos 
-                INNER JOIN fotos_autos ON vehiculos.correlativo = fotos_autos.id_vehiculo
-                WHERE vehiculos.correlativo = '$idVehiculo'";
-                $query2 = mysqli_query($conection, $instruccion2);
-                while ($i = mysqli_fetch_assoc($query2)){
-                    echo "<img class='fotoCarousel imagen' src=".$i['ubicacion'].">";
-                }
-                echo "<div class='arrow arrow-left'>";
-                echo "<i onclick='previousImage()' class='fas fa-chevron-left'></i>";
-                echo "</div>";
-                echo "<div class='arrow arrow-right'>";
-                echo "<i onclick='nextImage()' class='fas fa-chevron-right'></i>";
-                echo "</div>";
-                ?>
-        </div>
-    -->
-        <div class="container-information">
+        <div class="container-information section">
+            <h2>Informacion del vehiculo</h2>
+            <table>
+                <tr>
+                    <th>Marca</th>
+                    <th>Linea</th>
+                    <th>Tipo</th>
+                    <th>Transmisión</th>
+                    <th>Modelo</th>
+                    <th>Kilometraje</th>
+                    <th>Traccion</th>
+                    <th>Tipo de combustible</th>
+                    <th>Color</th>
+                    <th>Precio</th>
+                    <th>Cantidad de puertas</th>
+                </tr>
             <?php
                 $instruccion = "SELECT * FROM vehiculos
                 INNER JOIN marcas ON vehiculos.marca = marcas.id_marca
@@ -89,19 +87,11 @@
                 WHERE vehiculos.correlativo = '$idVehiculo'";
                 $query = mysqli_query($conection, $instruccion);
                 while ($r = mysqli_fetch_assoc($query)){
-                    echo "<h2>".$r['marca']."</h2>";
-                    echo "<h2>".$r['linea']."</h2>";
-                    echo "<h2>".$r['tipo']."</h2>";
-                    echo "<h2>".$r['transmision']."</h2>";
-                    echo "<h2>".$r['modelo']."</h2>";
-                    echo "<h2>".$r['km']."</h2>";
-                    echo "<h2>".$r['traccion']."</h2>";
-                    echo "<h2>".$r['combustible']."</h2>";
-                    echo "<h2>".$r['color']."</h2>";
-                    echo "<h2>".$r['precio']."</h2>";
-                    echo "<h2>".$r['cantidad_puertas']."</h2>";
+                    echo "<tr><td>".$r['marca']."</td><td>".$r['linea']."</td><td>".$r['tipo']."</td><td>".$r['transmision']."</td><td>".$r['modelo']."</td><td>".$r['km']."</td><td>".$r['traccion']."</td><td>".$r['combustible']."</td><td>".$r['color']."</td><td>Q".$r['precio'].".00</td><td>".$r['cantidad_puertas']."</td></tr>";
+                    
                 }
             ?>
+            </table>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
