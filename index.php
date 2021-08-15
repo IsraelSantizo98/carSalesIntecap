@@ -69,7 +69,7 @@ include 'php/conection.php';
                 </div>
             </dv>
             <div class="container-footer section-margin">
-            <div class="logo-footer">
+                <div class="logo-footer">
                     <a href="https://intecap.edu.gt/" target="_blank"><img src="https://intecap.edu.gt/wp-content/uploads/2019/01/logo-inverse.png" alt="Logo"></a>
                 </div>
                 <div class="footer">

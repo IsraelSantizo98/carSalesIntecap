@@ -22,6 +22,8 @@ $imageP = $_SESSION['imageP'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"
+    />
     <script src="https://kit.fontawesome.com/1085598771.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css?v=<?php echo(rand()); ?>">
     <title>Main</title>
@@ -35,8 +37,9 @@ $imageP = $_SESSION['imageP'];
           <img src="https://intecap.edu.gt/wp-content/uploads/2020/03/logo-intecap.png" alt="Logo">
         </a>
       </div>
-      <div class="navbar">
+      <div class="container-navbar">
         <ul>
+          <li><a href="profile.php"><i class="fas fa-user-circle"></i></a></li>
           <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i></a></li>
         </ul>
     </div>
@@ -52,7 +55,6 @@ $imageP = $_SESSION['imageP'];
         <ul>
           <li><a href="newCar.php">Insertar item</a></li>
           <li><a href="carModi.php">Modificar item</a></li>
-          <li><a href="carDelete.php">Eliminar item</a></li>
         </ul>
       </div>
       <div class="container-profile">

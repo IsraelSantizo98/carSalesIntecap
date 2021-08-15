@@ -62,38 +62,61 @@
         </div>
         <div class="container-information section">
             <h2>Informacion del vehiculo</h2>
-            <table>
+            <table class="table-margin">
                 <tr>
                     <th>Marca</th>
                     <th>Linea</th>
                     <th>Tipo</th>
                     <th>Transmisión</th>
                     <th>Modelo</th>
-                    <th>Kilometraje</th>
-                    <th>Traccion</th>
-                    <th>Tipo de combustible</th>
-                    <th>Color</th>
-                    <th>Precio</th>
-                    <th>Cantidad de puertas</th>
+                    <th>KM</th>
                 </tr>
             <?php
                 $instruccion = "SELECT * FROM vehiculos
                 INNER JOIN marcas ON vehiculos.marca = marcas.id_marca
                 INNER JOIN tipo_vehiculo ON vehiculos.tipo = tipo_vehiculo.id_tipo
                 INNER JOIN transmision ON vehiculos.transmision = transmision.id_transmicion
+                WHERE vehiculos.correlativo = '$idVehiculo'";
+                $query = mysqli_query($conection, $instruccion);
+                while ($r = mysqli_fetch_assoc($query)){
+                    echo "<tr><td>".$r['marca']."</td><td>".$r['linea']."</td><td>".$r['tipo']."</td><td>".$r['transmision']."</td><td>".$r['modelo']."</td><td>".$r['km']."</td></tr>";
+                }
+            ?>
+            </table>
+            <table>
+                <tr>
+                    <th>Traccion</th>
+                    <th>Tipo de combustible</th>
+                    <th>Color</th>
+                    <th>Precio</th>
+                    <th>Cantidad de puertas</th>
+                </tr>
+                <?php
+                $instruccion = "SELECT * FROM vehiculos
                 INNER JOIN traccion ON vehiculos.traccion = traccion.id_traccion
                 INNER JOIN combustible ON vehiculos.combustible = combustible.id_combustible
                 INNER JOIN colores ON vehiculos.color = colores.id_color
                 WHERE vehiculos.correlativo = '$idVehiculo'";
                 $query = mysqli_query($conection, $instruccion);
                 while ($r = mysqli_fetch_assoc($query)){
-                    echo "<tr><td>".$r['marca']."</td><td>".$r['linea']."</td><td>".$r['tipo']."</td><td>".$r['transmision']."</td><td>".$r['modelo']."</td><td>".$r['km']."</td><td>".$r['traccion']."</td><td>".$r['combustible']."</td><td>".$r['color']."</td><td>Q".$r['precio'].".00</td><td>".$r['cantidad_puertas']."</td></tr>";
+                    echo "<tr><td>".$r['traccion']."</td><td>".$r['combustible']."</td><td>".$r['color']."</td><td>Q".$r['precio'].".00</td><td>".$r['cantidad_puertas']."</td></tr>";
                     
                 }
             ?>
             </table>
         </div>
+        <div class="container-footer section-margin">
+            <div class="logo-footer">
+                    <a href="https://intecap.edu.gt/" target="_blank"><img src="https://intecap.edu.gt/wp-content/uploads/2019/01/logo-inverse.png" alt="Logo"></a>
+                </div>
+                <div class="footer">
+                    <ul>
+                        <li><a href="https://github.com/IsraelSantizo98"><i class="fab fa-github"></i></a></li>
+                    </ul>
+                </div>
+            </div>
     </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
     <script src="js/main.js"></script>
 </body>
