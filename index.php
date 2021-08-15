@@ -16,7 +16,7 @@ include 'php/conection.php';
 </head>
 <body>
     <div class="wrapper">
-        <dv class="container">
+        <div class="container">
             <div class="container-navbar ">
                 <div class="logo-navbar">
                     <img src="https://intecap.edu.gt/wp-content/uploads/2020/03/logo-intecap.png" alt="Logo">
@@ -67,7 +67,7 @@ include 'php/conection.php';
                         }
                 ?>
                 </div>
-            </dv>
+            </div>
             <div class="container-footer section-margin">
                 <div class="logo-footer">
                     <a href="https://intecap.edu.gt/" target="_blank"><img src="https://intecap.edu.gt/wp-content/uploads/2019/01/logo-inverse.png" alt="Logo"></a>

@@ -24,10 +24,12 @@ $imageP = $_SESSION['imageP'];
 </head>
 <body>
     <div class="wrapper">
-        <dv class="container">
+        <div class="container">
             <div class="container-navbar ">
                 <div class="logo-navbar">
-                    <img src="https://intecap.edu.gt/wp-content/uploads/2020/03/logo-intecap.png" alt="Logo">
+                    <a href="main.php">
+                        <img src="https://intecap.edu.gt/wp-content/uploads/2020/03/logo-intecap.png" alt="Logo">
+                    </a>
                 </div>
                 <div class="navbar">
                     <ul>
@@ -39,9 +41,10 @@ $imageP = $_SESSION['imageP'];
                 <label for="theme-toggle-btn">
                     <i class="fas fa-moon toggle-icon" aria-hidden="true"></i>
                 </label>
+                </div>
             </div>
             </div>
-            <div class="container-sale section ">
+            <div class="container-sale section">
                     <?php
                             $instruccion="SELECT vehiculos.correlativo, vehiculos.linea, marcas.marca FROM vehiculos
                             INNER JOIN marcas ON vehiculos.marca = marcas.id_marca";

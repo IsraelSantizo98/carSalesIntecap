@@ -27,8 +27,6 @@
                 <div class="navbar">
                     <ul>
                         <li><a href="login.php"><i class="fas fa-sign-in-alt"></i></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
                     </ul>
                 </div>
                 <div class="theme-toggle">

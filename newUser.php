@@ -11,7 +11,21 @@
     <title>Nuevo usuario</title>
 </head>
 <body>
-    <div class="container-user">
+    <div>
+    <div class="container-navbar">
+                <div class="logo-navbar">
+                    <a href="index.php">
+                        <img src="https://intecap.edu.gt/wp-content/uploads/2020/03/logo-intecap.png" alt="Logo">
+                    </a>
+                </div>
+                <div class="navbar">
+                    <ul>
+                        <li><a href="login.php"><i class="fas fa-sign-in-alt"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+    <div class="container-user section">
         <form action="uploadNewUser.php" method="POST" enctype="multipart/form-data">
             <fieldset>
                 <legend>Nuevo usuario</legend>
@@ -25,7 +39,7 @@
                 <input type="password" name="password">
                 <label for="archivo">Insertar una imagen</label>
                 <input type="file" name="archivo[]" id="archivo" multiple="">
-                <input type="submit" value="Crear Usuario">
+                <input class="btn btn-success" type="submit" value="Crear Usuario">
             </fieldset>
         </form>
     </div>

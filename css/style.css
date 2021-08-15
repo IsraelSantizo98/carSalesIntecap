@@ -21,6 +21,7 @@ html[data-theme="light"] {
 html[data-theme="dark"] {
     --textColorPrimary: #CDD9E5;
     --textColorSecondary: #fff;
+    --textColorDark: #1C2128;
     --backgroundColorPrimary: #1C2128;
     --backgroundColorSecondary: #2D333B;
     --colorIcon: #9DA7B2;
@@ -58,6 +59,9 @@ ul{
 h1{
     color: var(--textColorSecondary);
     margin: 0 3rem;
+}
+.icon{
+    margin-left: 2rem;
 }
 .section{
     max-width: 140rem;
@@ -120,6 +124,9 @@ h1{
     height: 20rem;
     display: flex;
     align-items: center;
+}
+.container-form-car{
+    margin-bottom: 10rem;
 }
 .container-sale{
     display: grid;
@@ -317,10 +324,16 @@ table {
     width: 100%;
 }
 td, th {
-    border: 1px solid #dddddd;
+    border: 1px solid var(--textColorPrimary);
     text-align: left;
     padding: 8px;
     text-align: center;
+}
+td{
+    color: var(--textColorDark);
+}
+th{
+    color: var(--textColorPrimary);
 }
 tr:nth-child(even) {
     background-color: #dddddd;
@@ -340,8 +353,7 @@ tr:nth-child(even) {
 .crud-option span a i{
     margin-left: 1rem;
 }
-/*Informacion carousel*/
-.container-informacion{
+.container-information{
     
 }
 /* Modales */
@@ -411,6 +423,9 @@ tr:nth-child(even) {
     }
     .container-information{
         width: 80vw;
+    }
+    .container-form-car{
+        margin-bottom: 10rem;
     }
 }
 @media only screen and (max-width:768px){

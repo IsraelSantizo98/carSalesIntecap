@@ -39,7 +39,6 @@ $imageP = $_SESSION['imageP'];
       </div>
       <div class="container-navbar">
         <ul>
-          <li><a href="profile.php"><i class="fas fa-user-circle"></i></a></li>
           <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i></a></li>
         </ul>
     </div>
@@ -50,11 +49,11 @@ $imageP = $_SESSION['imageP'];
       </label>
     </div>
   </div>
-  <div class="container-crud">
+  <div class="container-crud section">
       <div class="crud-selection">
         <ul>
-          <li><a href="newCar.php">Insertar item</a></li>
-          <li><a href="carModi.php">Modificar item</a></li>
+          <li><a href="newCar.php">Insertar item<i class="fas fa-plus-circle icon"></i></a></li>
+          <li><a href="carModi.php">Modificar item<i class="fas fa-exchange-alt icon"></i></a></li>
         </ul>
       </div>
       <div class="container-profile">

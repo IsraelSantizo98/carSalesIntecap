@@ -22,9 +22,11 @@
 </head>
 <body>
     <div>
-        <div class="container-navbar ">
+        <div class="container-navbar">
                         <div class="logo-navbar">
-                            <img src="https://intecap.edu.gt/wp-content/uploads/2020/03/logo-intecap.png" alt="Logo">
+                            <a href="../carModi.php">
+                                <img src="https://intecap.edu.gt/wp-content/uploads/2020/03/logo-intecap.png" alt="Logo">
+                            </a>
                         </div>
                         <div class="navbar">
                             <ul>
